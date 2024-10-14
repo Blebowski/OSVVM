@@ -88,6 +88,8 @@ analyze OsvvmGlobalPkg.vhd
 # Compile VendorCovApiPkg_Aldec.vhd for RivieraPro and ActiveHDL, otherwise compile VendorCovApiPkg.vhd
 if {$::osvvm::ToolVendor eq "Aldec"}  {
   analyze VendorCovApiPkg_Aldec.vhd
+} elseif {$::osvvm::ToolVendor eq "NVC"}  {
+  analyze VendorCovApiPkg_NVC.vhd
 } else {
   analyze VendorCovApiPkg.vhd
 }
